@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>574</width>
+    <height>471</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">* {
+    background-color: #ccccd6; /* 远山紫背景色 */
+	color:black;
+}
+
+QPushButton#btn_connect {
+    border: 2px solid #5c5c5c;
+    border-radius: 5px;
+    background-color: #76b852; /* 更亮绿色以提高视觉吸引力 */
+    color: white;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+}
+
+QPushButton#btn_connect:hover {
+    background-color: #8DC26F; /* 鼠标悬停时的颜色变化 */
+}
+
+QLineEdit#lineEdit_port, QLineEdit#lineEdit_ip {
+    border: 1px solid #ccc; /* 更细的边框 */
+    border-radius: 4px; /* 圆角 */
+    padding: 0 8px;
+    background: #ffffff;
+    selection-background-color: #b0bec5; /* 更柔和的选择背景色 */
+	color:black;
+}
+
+QLabel#label_port, QLabel#label_ip {
+    color: #37474F; /* 更深的字体颜色以提高可读性 */
+    font-weight: bold;
+}
+
+QProgressBar {
+    border: 2px solid #5c5c5c;
+    border-radius: 5px;
+    background-color: #CFD8DC; /* 更亮的背景色 */
+}
+
+QProgressBar::chunk {
+    background-color: #76b852; /* 与按钮相同的绿色 */
+    width: 20px; /* or whatever you like */
+}
+QTableView, QTreeView {
+  border: 1px solid #5c5c5c;
+  background-color: #ECEFF1;
+  selection-background-color: #CFD8DC;
+  selection-color: #37474F;
+  font-family: &quot;Microsoft YaHei&quot;;
+  font-size: 14px;
+  border-radius: 4px;
+color:black;
+}
+
+QHeaderView {
+  background-color: #CFD8DC;
+  border: 1px solid #CFD8DC;
+  border-bottom: none;
+  font-weight: bold;
+  font-family: &quot;Microsoft YaHei&quot;;
+  font-size: 12px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+QHeaderView::section {
+  padding: 4px;
+  border-right: 1px solid #CFD8DC;
+  background-color: #B0BEC5;
+}
+
+QTableView::item, QTreeView::item {
+    padding: 4px 8px;
+    border-bottom: 1px solid #CFD8DC;
+    border-radius: 2px;
+ background-color: #6a8372; 
+}
+
+/* 鼠标悬停在项上时 */
+QTableView::item:hover, QTreeView::item:hover {
+    background-color: #a7a8bd; 
+}
+
+/* 选中项 */
+QTableView::item:selected, QTreeView::item:selected {
+    background-color: #B0BEC5; /* 浅褐色 */
+    border: 1px solid #B0BEC5;
+    color: #37474F; /* 设置选中文本颜色为黑色 */
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="2" column="0">
+     <widget class="QTreeView" name="treeView"/>
+    </item>
+    <item row="0" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLabel" name="label_ip">
+        <property name="text">
+         <string>IP地址：</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit_ip"/>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_port">
+        <property name="text">
+         <string>端口：</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit_port"/>
+      </item>
+      <item>
+       <spacer name="h_spacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_connect">
+        <property name="text">
+         <string>连接</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="0">
+     <widget class="QProgressBar" name="progress">
+      <property name="value">
+       <number>24</number>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>574</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
